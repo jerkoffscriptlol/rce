@@ -5,8 +5,11 @@ from flask import Flask
 import threading
 import requests
 import asyncio
+import os
+from dotenv import load_dotenv
 
-DISCORD_BOT_TOKEN = "PUT-YOUR-TOKEN-HERE"
+load_dotenv()
+DISCORD_BOT_TOKEN = os.getenv("DISCORD_BOT")
 API_URL = "https://website-rt6b.onrender.com"
 LOG_CHANNEL_ID = 1393717563304710247
 
